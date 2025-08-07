@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Records - Plagiarism Detector{% endblock %}
+
+{% block content %}
+    <h2>Upload Records (ZIP file)</h2>
+    <form class="upload-form" action="/resume" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".zip">
+        <button type="submit">Upload</button>
+    </form>
+{% endblock %}

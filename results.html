@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+
+{% block title %}Results - Plagiarism Detector{% endblock %}
+
+{% block content %}
+    <h2>Plagiarism Detection Results</h2>
+    {% if error %}
+        <div class="error">
+            <strong>Error:</strong> {{ error }}
+        </div>
+    {% elif results %}
+        <ul>
+            {% for result in results %}
+                <li>
+                    <strong>{{ result.file1 }}</strong> and <strong>{{ result.file2 }}</strong> have a similarity score of <strong>{{ result.score }}</strong>.
+                    <br>
+                    <strong>Common Text:</strong>
+                    <div class="common-words">
+                        {% for word in result.common_text %}
+                            <span class="highlight">{{ word }}</span>{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </div>
+                    <h3>{{ result.file1 }}</h3>
+                    <div class="file-text">
+                        {{ result.file1_text }}
+                    </div>
+                    <h3>{{ result.file2 }}</h3>
+                    <div class="file-text">
+                        {{ result.file2_text }}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no-plagiarism">No plagiarism detected.</p>
+    {% endif %}
+    <a href="/">Back to Home</a>
+{% endblock %}

@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Animated Page</title>
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    /* Background animation */
+    .background {
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #fad0c4);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Container styling */
+    .container {
+      text-align: center;
+    }
+
+    /* Heading styling */
+    h1 {
+      margin-bottom: 30px;
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Button group styling */
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Space between buttons */
+      align-items: center;
+    }
+
+    /* Button styling */
+    .animated-button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      background: #fff;
+      color: #333;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, background-color 0.3s, color 0.3s;
+      width: 200px; /* Fixed button width */
+      text-align: center;
+    }
+
+    .animated-button:hover {
+      transform: scale(1.1);
+      background: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="container">
+      <h1>PLAGIARISM DETECTOR</h1>
+      <div class="button-group">
+<form action="/resume" method="get">
+        <button class="animated-button" onclick="navigateTo('/resume')">RESUME FILES</button>
+      </form> <!-- <button class="animated-button" onclick="navigateTo('research')">RESEARCH PAPERS</button>
+        <button class="animated-button" onclick="navigateTo('record')">RECORD SUBMISSIONS</button> 
+      </div>
+    </div>
+  </div>
+  <script>
+    function navigateTo(page) {
+      alert(`Navigating to: ${page}`); // Replace with actual navigation logic.
+    }
+  </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Plagiarism Detector</h1>
+    <a href="/resume">Upload Resumes</a>
+</body>
+</html> -->
+
+{% extends "base.html" %}
+
+{% block title %}Home - Plagiarism Detector{% endblock %}
+
+{% block content %}
+    <h2>Welcome to the Plagiarism Detector</h2>
+    <p>Upload a ZIP file containing records to check for plagiarism.</p>
+    <a href="/resume">Upload Records</a>
+{% endblock %}
